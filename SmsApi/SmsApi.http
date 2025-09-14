@@ -1,0 +1,22 @@
+@baseUrl = https://localhost:7211/api/v1
+
+### Send SMS (Valid Request)
+POST {{baseUrl}}/messages
+Content-Type: application/json
+
+{
+  "recipientNumber": "1234567890",
+  "text": "Hello from .http file!"
+}
+
+### Send SMS (Missing Text — should trigger validation)
+POST {{baseUrl}}/messages
+Content-Type: application/json
+
+{
+  "recipientNumber": "1234567890",
+  "text": "Hi"
+}
+
+### Get Message Status (Replace {id} with actual ID from first request)
+GET {{baseUrl}}/messages/1
