@@ -24,8 +24,3 @@ A few key things to mention that I used in this project:
   `MessageService` validates input (recipient number, message text) and throws `ArgumentException` when invalid — caught by middleware and returned as a `400 Bad Request`.
 
 ---
-
-## 🔧 Running the App
-
-```bash
-dotnet run
